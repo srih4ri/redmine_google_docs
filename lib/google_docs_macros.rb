@@ -172,11 +172,16 @@ class GoogleDocumentMacros
     else
       edit = false
     end
+    
+    if args.length == 3
+      domain = args[2]
+    end
+    
     if /^[\w-]+$/.match(doc_key)
       if edit
         url = "https://docs.google.com/document/d/#{doc_key}/edit"
       else
-        url = "https://docs.google.com/document/d/#{doc_key}"
+        url = "https://docs.google.com/a/#{domain}/document/pub?id=#{doc_key};embedded=true"
       end
       out = "<iframe src='#{url}' width='800' height='400'></iframe>"
     else
