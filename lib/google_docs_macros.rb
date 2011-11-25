@@ -181,7 +181,7 @@ class GoogleDocumentMacros
       if edit
         url = "https://docs.google.com/document/d/#{doc_key}/edit"
       else
-        url = "https://docs.google.com/a/#{domain}/document/pub?id=#{doc_key};embedded=true"
+        url = "https://docs.google.com/a/#{domain}/document/pub?id=#{doc_key}"
       end
       out = "<iframe src='#{url}' width='800' height='400'></iframe>"
     else
