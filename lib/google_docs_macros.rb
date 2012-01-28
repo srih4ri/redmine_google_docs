@@ -183,7 +183,7 @@ class GoogleDocumentMacros
       else
         url = "https://docs.google.com/a/#{domain}/document/pub?id=#{doc_key}"
       end
-      out = "<iframe src='#{url}' width='800' height='400'></iframe>"
+      out = "<iframe src='#{url}' width='100%' height='400'></iframe>"
     else
       raise "The Google document key must be alphanumeric."
     end
